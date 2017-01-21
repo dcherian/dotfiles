@@ -1,0 +1,99 @@
+# Lots from: https://stribika.github.io/2015/01/04/secure-secure-shell.html
+# /etc/ssh/ssh_config says that every option is only changed the first time around, so defaults at the end.
+Host github.com
+     User git
+     IdentityFile ~/.ssh/github-mac
+     KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+     PubkeyAuthentication yes
+
+Host router
+     HostName 192.168.1.1
+     KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+
+Host poison
+     HostName poison.whoi.edu
+     User deepak
+     Compression yes
+     Ciphers blowfish-cbc
+     PubkeyAuthentication yes
+     IdentityFile ~/.ssh/kadal
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     
+# ipython server tunnel to poison
+Host poison-tunnel
+     HostName poison.whoi.edu
+     User deepak
+     LocalForward 6667 127.0.0.1:8888
+     
+Host mohawk
+     HostName mohawk.whoi.edu
+     User dcherian
+     Compression yes
+     Ciphers arcfour
+     PubkeyAuthentication yes
+     IdentityFile ~/.ssh/kadal
+     ForwardX11 yes
+     ForwardX11Trusted yes
+
+Host mohawk-poison
+     HostName mohawk.whoi.edu
+     User dcherian
+     ProxyCommand ssh poison -W %h:%p
+     PubkeyAuthentication yes
+     Compression yes
+     ForwardX11 yes
+     ForwardX11Trusted yes
+          
+Host scylla
+     HostName scylla-b.whoi.edu
+     User dcherian
+     Ciphers arcfour
+     Compression yes
+     PubkeyAuthentication yes
+     IdentityFile ~/.ssh/kadal
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     
+Host scylla-poison
+     HostName scylla-b.whoi.edu
+     User dcherian
+     ProxyCommand ssh poison -W %h:%p
+     Ciphers blowfish-cbc
+     Compression yes
+     PubkeyAuthentication yes
+     ForwardX11 yes
+     ForwardX11Trusted yes
+
+Host yellowstone
+     HostName yellowstone.ucar.edu
+     User dcherian
+     PubkeyAuthentication yes
+     IdentityFile ~/.ssh/kadal
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     Compression yes
+     
+Host aces
+     HostName login.acesgrid.org
+     User dcherian
+     PubkeyAuthentication yes
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     
+Host *
+#     ControlMaster auto
+#     ControlPath /tmp/ssh_mux_%h_%p_%r
+     PubKeyAuthentication no
+     UseRoaming no
+     ServerAliveInterval 120
+     ServerAliveCountMax 3
+     AddressFamily inet
+     KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
+     HostKeyAlgorithms ssh-ed25519-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ssh-ed25519,ssh-rsa
+     Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+     MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,hmac-ripemd160,umac-128@openssh.com
+     ForwardX11 no
+     ForwardAgent no
+     ForwardX11trusted no
+     HashKnownHosts yes
