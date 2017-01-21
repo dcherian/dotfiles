@@ -1,0 +1,55 @@
+[push]
+	default = tracking
+
+[user]
+	email = dpak.cherian@gmail.com
+	name = deepak
+
+[alias]
+	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\n--abbrev-commit --date=relative
+	d = diff
+	dc = diff --cached
+	gl = log --oneline --decorate --stat --graph
+	st = status -sb
+	whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+	ap = add -p
+	unstage = reset HEAD
+	uncommit = reset --soft HEAD^
+        lstags = log --date-order --tags --simplify-by-decoration --pretty=format:'%ci %h %d'
+	commend = commit --amend --no-edit
+
+[core]
+	editor = emacsclient -t
+
+[merge]
+	tool = meld
+	summary = true
+
+[credential]
+	helper = cache --timeout=432000
+
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+
+[help]
+	autocorrect = 1
+
+[status]
+	relativePaths = false
+	submodulesummary = true
+
+[gc]
+	auto = 1
+
+[diff]
+	mnemonicprefix = true
+	indentHeuristic = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
