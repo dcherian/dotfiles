@@ -1,7 +1,6 @@
 export PATH=/Library/TeX/texbin:/usr/local/bin:$PATH
 export GREP_OPTION='--color=auto'
 
-
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 export HOMEBREW_CASK_OPTS=--require-sha
 
@@ -112,7 +111,7 @@ Jobs="\j"
 User="\u"
 Host="\h"
 
-export PS1=$Color_Off"┌── "$Time24h$Red" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off"\n└──────> "$Black
+export PS1=$Color_Off"┌── "$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off"\n└──────> "$Black
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
