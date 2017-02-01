@@ -112,7 +112,7 @@ Jobs="\j"
 User="\u"
 Host="\h"
 
-export PS1=$Color_Off"┌── "$Time24h$Blue" {"$PathFull"} "$Color_Off"\n└──────> "$Black
+export PS1=$Color_Off"┌── "$Time24h$Red" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off"\n└──────> "$Black
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
