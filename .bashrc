@@ -1,8 +1,5 @@
-export PATH=/Library/TeX/texbin:/usr/local/bin:$PATH
-export GREP_OPTION='--color=auto'
 
-export HOMEBREW_NO_INSECURE_REDIRECT=1
-export HOMEBREW_CASK_OPTS=--require-sha
+export GREP_OPTION='--color=auto'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -17,14 +14,6 @@ shopt -s checkwinsize
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=5000
 HISTFILESIZE=5000
-
-export PS1="\W \$ "
-
-[[ -s /usr/local/etc/profile.d/autojump.sh ]] && . /usr/local/etc/profile.d/autojump.sh
-
-if [ -f /usr/local/etc/bash_completion ]; then
-    . /usr/local/etc/bash_completion
-fi
 
 ######### PROMPT
 # Reset
@@ -113,13 +102,4 @@ Host="\h"
 
 export PS1=$Color_Off"┌── "$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off"\n└──────> "$Black
 
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
-PATH="/Users/katherinefrench/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/katherinefrench/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/katherinefrench/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/katherinefrench/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/katherinefrench/perl5"; export PERL_MM_OPT;
-
-# added by Anaconda3 4.2.0 installer
-export PATH="/Users/katherinefrench/anaconda/bin:$PATH"
+source ~/dotfiles/bashrc.linux
