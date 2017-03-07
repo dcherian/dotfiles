@@ -11,3 +11,11 @@ export PATH="/home/deepak/anaconda3/bin:$PATH"
 export PATH="/home/deepak/.linuxbrew/bin:$PATH"
 export MANPATH="/home/deepak/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="/home/deepak/.linuxbrew/share/info:$INFOPATH"
+
+# hold down Return and get Control_R!
+# http://emacsredux.com/blog/2016/01/30/remap-return-to-control-in-gnu-slash-linux/
+xmodmap -e "remove Control = Control_R"
+xmodmap -e "keycode 0x69 = Return"
+xmodmap -e "keycode 0x24 = Control_R"
+xmodmap -e "add Control = Control_R"
+xcape -t 10000 -e "Control_R=Return"
