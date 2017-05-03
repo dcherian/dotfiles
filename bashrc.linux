@@ -6,16 +6,12 @@ fi
 
 eval `dircolors ~/.dir_colors`
 
-export PATH=/usr/local/bin:/usr/local/texlive/2016/bin/x86_64-linux/:$PATH
 # added by Anaconda3 4.3.0 installer
 export PATH="/home/deepak/anaconda3/bin:$PATH"
-
-export PATH="/home/deepak/.linuxbrew/bin:$PATH"
-export MANPATH="/home/deepak/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="/home/deepak/.linuxbrew/share/info:$INFOPATH"
+export PATH=/usr/local/bin:/usr/local/texlive/2016/bin/x86_64-linux/:$PATH
 
 unset PYTHONPATH
-export PYTHONPATH="/home/deepak/anaconda3/lib/python3.6/:/home/deepak/anaconda3/lib/python3.6/site-packages"
+# export PYTHONPATH="/home/deepak/python/:/home/deepak/anaconda3/lib/python3.6/:/home/deepak/anaconda3/lib/python3.6/site-packages"
 
 export QT_STYLE_OVERRIDE=gtk
 
