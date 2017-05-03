@@ -18,3 +18,6 @@ $pdf_mode = 3;
 $postscript_mode = $dvi_mode = 0;
 $dvipdf = 'xdvipdfmx -z1 %O -o %D %S';
 $clean_full_ext .= ' xdv';
+$pdf_previewer = 'mupdf %R.pdf';
+$pdf_update_method = 4;
+$pdf_update_command = 'xdotool search --name %R.pdf key r';
