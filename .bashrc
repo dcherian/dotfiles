@@ -12,8 +12,8 @@ shopt -s histappend
 shopt -s checkwinsize
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=5000
-HISTFILESIZE=5000
+HISTSIZE=50000
+HISTFILESIZE=50000
 
 ######### PROMPT
 # Reset
