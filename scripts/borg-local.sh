@@ -1,7 +1,8 @@
-REPOSITORY=/media/deepak/osu-backup-1/backup/
+REPOSITORY=/media/osu-backup-1/backup/
 
-# export BORG_PASSPHRASE='gxz!0lopmacbookborgbackup'
 export BORG_PASSPHRASE=''
+
+export BORG_RELOCATED_REPO_ACCESS_IS_OK=yes
 
 # Backup all of /home and /var/www except a few
 # excluded directories
@@ -14,4 +15,4 @@ borg create --compression lz4 -v --stats \
 # limit prune's operation to this machine's archives and not apply to
 # other machine's archives also.
 borg prune -v --list $REPOSITORY  \
-     --keep-daily=7 --keep-weekly=4 --keep-monthly=6
+     --keep-daily=14 --keep-weekly=6 --keep-monthly=10
