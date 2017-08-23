@@ -6,3 +6,6 @@ alias o="exo-open"
 
 alias epy="jupyter qtconsole --existing=emacs-default.json"
 alias ipy="jupyter qtconsole --existing"
+
+alias ncdump='/usr/bin/ncdump'
+alias nc-config='/usr/bin/nc-config'
