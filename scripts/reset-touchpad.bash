@@ -1,2 +1,2 @@
-sudo modprobe -r psmouse
-sudo modprobe psmouse
+sudo modprobe -r hid_multitouch
+sudo modprobe hid_multitouch
