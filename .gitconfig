@@ -16,8 +16,12 @@
 	unstage = reset HEAD
 	uncommit = reset --soft HEAD^
         lstags = log --date-order --tags --simplify-by-decoration --pretty=format:'%ci %h %d'
-	commend = commit --amend --no-edit
-
+	extend = commit --amend --no-edit
+	branches = branch -a
+	tags = tag
+	stashes = stash list
+	rename-branch = branch -m
+	delete-branch = branch -D
 [core]
 	editor = emacsclient -t
 
@@ -51,5 +55,5 @@
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-	required = true
 	process = git-lfs filter-process
+	required = true
