@@ -1,4 +1,5 @@
 REPOSITORY=/media/osu-backup-1/backup/
+# REPOSITORY=/media/deepak/passport/backup/
 
 export BORG_PASSPHRASE=''
 
@@ -6,7 +7,7 @@ export BORG_RELOCATED_REPO_ACCESS_IS_OK=yes
 
 # Backup all of /home and /var/www except a few
 # excluded directories
-borg create --compression lz4 -v --stats \
+borg create -v --compression lz4 -v --stats \
      $REPOSITORY::'{now:%Y-%m-%d}'  \
      /home/deepak/
 

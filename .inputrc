@@ -4,6 +4,7 @@ set mark-symlinked-directories on
 set skip-completed-text on
 set enable-keypad on
 set editing-mode emacs
+set enable-bracketed-space on
 
 set completion-prefix-display-length 2
 

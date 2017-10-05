@@ -7,13 +7,14 @@ fi
 eval `dircolors ~/.dir_colors`
 
 # added by Anaconda3 4.3.0 installer
-export PATH="/home/deepak/anaconda3/bin:$PATH"
-export PATH=/usr/local/bin:/usr/local/texlive/2016/bin/x86_64-linux/:$PATH
+export  PATH=/usr/local/bin:/usr/local/texlive/2016/bin/x86_64-linux/:/home/deepak/anaconda3/bin:/home/deepak/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
-unset PYTHONPATH
-# export PYTHONPATH="/home/deepak/python/:/home/deepak/anaconda3/lib/python3.6/:/home/deepak/anaconda3/lib/python3.6/site-packages"
+export PYTHONPATH="/home/deepak/python/"
 
 export QT_STYLE_OVERRIDE=gtk
+
+# "precise" scrolling
+export MOZ_USE_XINPUT2=1
 
 # hold down Return and get Control_R!
 # http://emacsredux.com/blog/2016/01/30/remap-return-to-control-in-gnu-slash-linux/
