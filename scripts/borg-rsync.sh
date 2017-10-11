@@ -19,3 +19,5 @@ borg create --remote-path=borg1 -v --stats \
 # other machine's archives also.
 borg prune --remote-path=borg1 -v --list $REPOSITORY  \
      --keep-daily=7 --keep-weekly=4 --keep-monthly=6
+
+notify-send "borg-rsync: Finished backing up!"

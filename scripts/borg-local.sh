@@ -17,3 +17,5 @@ borg create -v --compression lz4 -v --stats \
 # other machine's archives also.
 borg prune -v --list $REPOSITORY  \
      --keep-daily=14 --keep-weekly=6 --keep-monthly=10
+
+notify-send "borg-local: finished backing up!"
