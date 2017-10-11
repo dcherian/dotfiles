@@ -11,7 +11,8 @@ borg create --remote-path=borg1 -v --stats \
      /home/deepak/website \
      /home/deepak/Documents \
      /home/deepak/org \
-     /home/deepak/notes
+     /home/deepak/notes \
+     /home/deepak/dotfiles
 
 # Use the `prune` subcommand to maintain 7 daily, 4 weekly and 6 monthly
 # archives of THIS machine. The '{hostname}-' prefix is very important to
