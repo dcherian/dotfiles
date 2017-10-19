@@ -102,4 +102,6 @@ Host="\h"
 
 export PS1=$Color_Off"┌── "$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off"\n└──────> "$Black
 
-source ~/dotfiles/bashrc.linux
+[ -f ~/dotfiles/bashrc.linux ] && source ~/dotfiles/bashrc.linux
+
+[ -f ~/dotfiles/.fzf.bash ] && source ~/dotfiles/.fzf.bash
