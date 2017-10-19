@@ -12,6 +12,12 @@ borg create --remote-path=borg1 -v --stats \
      /home/deepak/Documents \
      /home/deepak/org \
      /home/deepak/notes \
+     /home/deepak/dotfiles \
+     /home/deepak/zotero \
+     /home/deepak/ebooks \
+     /home/deepak/tools \
+     /home/deepak/python \
+     /home/deepak/wedding \
      /home/deepak/dotfiles
 
 # Use the `prune` subcommand to maintain 7 daily, 4 weekly and 6 monthly
