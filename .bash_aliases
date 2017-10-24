@@ -9,3 +9,7 @@ alias ipy="jupyter qtconsole --existing"
 
 alias ncdump='/usr/bin/ncdump'
 alias nc-config='/usr/bin/nc-config'
+
+alias e='f -e emacsclient'
+alias fr='f -e FoxitReader'
+alias fo='FoxitReader "/home/deepak/p/`find ~/p/ -type f -printf "%P\n" | fzf`"'
