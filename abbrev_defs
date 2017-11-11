@@ -61,6 +61,10 @@
 
 (define-abbrev-table 'debugger-mode-abbrev-table '())
 
+(define-abbrev-table 'diary-fancy-display-mode-abbrev-table '())
+
+(define-abbrev-table 'diary-mode-abbrev-table '())
+
 (define-abbrev-table 'diff-mode-abbrev-table '())
 
 (define-abbrev-table 'dig-mode-abbrev-table '())
@@ -101,6 +105,8 @@
   '(
    ))
 
+(define-abbrev-table 'ffip-diff-mode-abbrev-table '())
+
 (define-abbrev-table 'fundamental-mode-abbrev-table '())
 
 (define-abbrev-table 'gdb-script-mode-abbrev-table '())
@@ -112,29 +118,37 @@
 (define-abbrev-table 'global-abbrev-table
   '(
     ("appropraite" "appropriate" nil 0)
+    ("availabe" "available" nil 0)
     ("barocllincally" "baroclinically" nil 0)
     ("betweent" "between" nil 0)
     ("cocnvective" "convective" nil 0)
-    ("continental" "continental" nil 2)
+    ("collabrations" "collaborations" nil 0)
+    ("continental" "continental" nil 7)
     ("correspoding" "corresponding" nil 0)
     ("defintion" "definition" nil 0)
     ("descrubung" "describing" nil 0)
     ("durectuin" "direction" nil 0)
     ("figires" "figures" nil 0)
     ("instantaneops" "instantaneous" nil 0)
+    ("masschusetts" "massachusetts" nil 0)
     ("maxmimum" "maximum" nil 0)
     ("nothward" "northward" nil 0)
+    ("obervations" "observations" nil 0)
+    ("parantheses" "parentheses" nil 0)
     ("parititooning" "prototyping" nil 0)
     ("possbilitiy" "possibility" nil 0)
+    ("propsed" "proposed" nil 0)
     ("qqiuckly" "quickly" nil 0)
+    ("quatifying" "quantifying" nil 0)
     ("quqiver" "quiver" nil 0)
+    ("relveant" "relevant" nil 0)
     ("salonity" "salinity" nil 0)
     ("salvagable" "salvageable" nil 0)
     ("shelbreak" "shelfbreak" nil 0)
     ("shelbreka" "shelbreak" nil 0)
     ("shelfbreka" "shellfire" nil 0)
     ("symmertic" "symmetric" nil 0)
-    ("the" "the" nil 123)
+    ("the" "the" nil 236)
     ("topgraphic" "topographic" nil 0)
     ("topogrpahic" "topographic" nil 1)
     ("unforunately" "unfortunately" nil 0)
@@ -280,6 +294,8 @@
 (define-abbrev-table 'ruby-mode-abbrev-table '())
 
 (define-abbrev-table 'scss-mode-abbrev-table '())
+
+(define-abbrev-table 'sdcv-mode-abbrev-table '())
 
 (define-abbrev-table 'select-tags-table-mode-abbrev-table '())
 
