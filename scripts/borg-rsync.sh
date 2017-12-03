@@ -27,4 +27,4 @@ borg create --remote-path=borg1 -v --stats \
 borg prune --remote-path=borg1 -v --list $REPOSITORY  \
      --keep-daily=7 --keep-weekly=4 --keep-monthly=6
 
-notify-send "borg-rsync: Finished backing up!"
+notify-send -i info "borg-rsync: Finished backing up!"
