@@ -1,3 +1,4 @@
+#-*-shell-script-*-
 [ -f /usr/share/autojump/autojump.bash ] && . /usr/share/autojump/autojump.bash
 
 if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -7,7 +8,7 @@ fi
 eval `dircolors ~/.dir_colors`
 
 # added by Anaconda3 4.3.0 installer
-export  PATH=/home/deepak/.local/bin/:/usr/local/bin:/usr/local/texlive/2016/bin/x86_64-linux/:/home/deepak/anaconda3/bin:/home/deepak/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+export  PATH=/home/deepak/.local/bin/:/usr/local/bin:/usr/local/texlive/2017/bin/x86_64-linux/:/home/deepak/anaconda3/bin:/home/deepak/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 export PYTHONPATH="/home/deepak/python/"
 

@@ -16,6 +16,6 @@ borg create -v --compression lz4 -v --stats \
 # limit prune's operation to this machine's archives and not apply to
 # other machine's archives also.
 borg prune -v --list $REPOSITORY  \
-     --keep-daily=14 --keep-weekly=6 --keep-monthly=10
+     --keep-daily=30 --keep-weekly=6 --keep-monthly=10
 
 notify-send -i info "borg-local: finished backing up!"
