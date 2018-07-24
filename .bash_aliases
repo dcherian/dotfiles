@@ -1,6 +1,7 @@
 alias ls='ls --color'
-alias ll="ls -alh"
-alias matlab="/Applications/MATLAB_R2016b.app/bin/matlab"
+alias ll="exa -al"
+alias matlab="/usr/local/MATLAB/R2018a/bin/matlab"
+alias matlab.2017a='/usr/local/bin/matlab'
 
 alias o="exo-open"
 
