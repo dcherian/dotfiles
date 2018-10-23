@@ -2,8 +2,8 @@
 	default = tracking
 
 [user]
-	email = dpak.cherian@gmail.com
-	name = deepak
+	email = dcherian@mit.edu
+	name = dcherian
 
 [alias]
 	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\n--abbrev-commit --date=relative
@@ -53,7 +53,7 @@
 	mnemonicprefix = true
 	indentHeuristic = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
