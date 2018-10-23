@@ -14,6 +14,8 @@ export PYTHONPATH="/home/deepak/python/"
 
 export QT_STYLE_OVERRIDE=gtk
 
+export PROJ_LIB=/home/deepak/anaconda3/share/proj/
+
 # "precise" scrolling
 export MOZ_USE_XINPUT2=1
 
