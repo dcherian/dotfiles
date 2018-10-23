@@ -1,27 +1,59 @@
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import xarray as xr
-import importlib
-
-import netCDF4 as nc
-import h5py
-import seawater as sw
-import matplotlib.dates as dt
-import bottleneck as bn
-
 import sys
 sys.path.append('/home/deepak/python/')
 
+import warnings
+
+import importlib
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+
+warnings.filterwarnings("ignore", message="numpy.dtype size changed")
+import numpy as np
+
+import scipy as sp
+import pandas as pd
+import seaborn as sns
+import xarray as xr
+
+import netCDF4 as nc
+import seawater as sw
+import gsw
+import bottleneck as bn
+
+# for company python completer
+warnings.simplefilter("ignore",
+                      category=PendingDeprecationWarning,
+                      lineno=1943)
+
+warnings.simplefilter(action='ignore', category=FutureWarning)
+import h5py
+
+import xrscipy as xrsp
+import sciviscolor as svc
 import moor
 import chipy
 import moorarr
+
+# projects
+import sys
+sys.path.append('/home/deepak/work/eddydiff/')
+import eddydiff as ed
+
+sys.path.append('/home/deepak/work/bay/scripts')
+import bay
 
 import dcpy.util
 import dcpy.ts
 import dcpy.oceans
 import dcpy.plots
+import dcpy.explode
+
+warnings.resetwarnings()
+
+warnings.filterwarnings("ignore", message="BlockingKernelClient._ip_changed")
+warnings.filterwarnings("ignore", message="ResourceWarning")
+warnings.filterwarnings("ignore", message="Completer")
+
 
 def export_bokeh(plot, outPNG, outJS, outHTML, bkjs='local'):
     from bokeh.io import export_png
