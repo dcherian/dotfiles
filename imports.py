@@ -13,7 +13,9 @@ import numpy as np
 import scipy as sp
 import pandas as pd
 import seaborn as sns
+
 import xarray as xr
+xr.set_options(keep_attrs=True)
 
 import netCDF4 as nc
 import seawater as sw
