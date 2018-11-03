@@ -13,5 +13,5 @@ alias nc-config='/usr/bin/nc-config'
 
 alias e='f -e emacsclient'
 alias fr='f -e FoxitReader'
-alias fo='FoxitReader "/home/deepak/p/`find ~/p/ -type f -printf "%P\n" | fzf`"'
-alias mo='mupdf "/home/deepak/p/`find ~/p/ -type f -printf "%P\n" | fzf`"'
+alias fo='filename=`find ~/p/ -type f -printf "%P\n" | fzf`; FoxitReader "/home/deepak/p/$filename" &'
+alias mo='filename=`find ~/p/ -type f -printf "%P\n" | fzf`; mupdf "/home/deepak/p/$filename" &'
