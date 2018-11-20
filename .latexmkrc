@@ -13,7 +13,7 @@
 # code: 
 
 
-$latex = 'xelatex --no-pdf -parse-first-line -synctex=1 %O %S && cp %R.xdv %D';
+$latex = 'xelatex --no-pdf -interaction=nonstopmode -parse-first-line -synctex=1 %O %S && cp %R.xdv %D';
 $pdf_mode = 3;
 $postscript_mode = $dvi_mode = 0;
 $dvipdf = 'xdvipdfmx -z1 %O -o %D %S';
