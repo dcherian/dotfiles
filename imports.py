@@ -36,6 +36,8 @@ import moor
 import chipy
 import moorarr
 
+import dcpy.xr_accessor
+
 # projects
 import sys
 sys.path.append('/home/deepak/work/eddydiff/')
