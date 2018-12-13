@@ -52,6 +52,8 @@
 [diff]
 	mnemonicprefix = true
 	indentHeuristic = true
+[github]
+	user = dcherian
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
