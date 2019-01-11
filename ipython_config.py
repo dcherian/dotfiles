@@ -5,3 +5,4 @@ c.InteractiveShellApp.extensions = [
     'line_profiler',
     'memory_profiler']
 c.InteractiveShellApp.exec_lines.append('%autoreload 2')
+c.InteractiveShellApp.exec_lines.append('%matplotlib qt')

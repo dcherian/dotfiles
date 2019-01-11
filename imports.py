@@ -35,6 +35,7 @@ import sciviscolor as svc
 import moor
 import chipy
 import moorarr
+import xfilter
 
 import dcpy.xr_accessor
 
