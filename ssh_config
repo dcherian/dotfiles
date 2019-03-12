@@ -97,3 +97,5 @@ Host *
      ForwardAgent no
      ForwardX11trusted no
      HashKnownHosts yes
+     AddKeysToAgent yes
+     UseKeychain yes
