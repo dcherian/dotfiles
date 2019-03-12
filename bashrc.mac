@@ -20,4 +20,4 @@ export PATH=/Library/TeX/texbin:/usr/local/bin:$PATH
 # added by Anaconda3 4.2.0 installer
 export PATH="/Users/dcherian/anaconda/bin:$PATH"
 
-. /home/deepak/anaconda3/etc/profile.d/conda.sh
+. /home/dcherian/anaconda3/etc/profile.d/conda.sh
