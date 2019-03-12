@@ -6,6 +6,7 @@ import warnings
 import importlib
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+import cmocean
 
 warnings.filterwarnings("ignore", message="numpy.dtype size changed")
 import numpy as np
