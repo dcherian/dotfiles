@@ -102,7 +102,8 @@ Host="\h"
 
 export PS1=$Color_Off"┌── "$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off"\n└──────> "$White
 
-[ -f ~/dotfiles/bashrc.linux ] && source ~/dotfiles/bashrc.linux
+[ -f ~/bashrc.linux ] && source ~/dotfiles/bashrc.linux
+[ -f ~/bashrc.mac ] && source ~/dotfiles/bashrc.mac
 [ -f ~/dotfiles/jupyter-completion.bash ] && source ~/dotfiles/jupyter-completion.bash
 [ -f ~/dotfiles/ipython-completion.bash ] && source ~/dotfiles/ipython-completion.bash
 
