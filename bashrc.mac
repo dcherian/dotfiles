@@ -9,13 +9,13 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
-PATH="/Users/katherinefrench/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/katherinefrench/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/katherinefrench/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/katherinefrench/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/katherinefrench/perl5"; export PERL_MM_OPT;
+# PATH="/Users/dcherian/perl5/bin${PATH:+:${PATH}}"; export PATH;
+# PERL5LIB="/Users/dcherian/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+# PERL_LOCAL_LIB_ROOT="/Users/dcherian/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+# PERL_MB_OPT="--install_base \"/Users/dcherian/perl5\""; export PERL_MB_OPT;
+# PERL_MM_OPT="INSTALL_BASE=/Users/dcherian/perl5"; export PERL_MM_OPT;
 
 
 export PATH=/Library/TeX/texbin:/usr/local/bin:$PATH
 # added by Anaconda3 4.2.0 installer
-export PATH="/Users/katherinefrench/anaconda/bin:$PATH"
+export PATH="/Users/dcherian/anaconda/bin:$PATH"
