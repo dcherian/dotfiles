@@ -1,21 +1,44 @@
 # Lots from: https://stribika.github.io/2015/01/04/secure-secure-shell.html
 # /etc/ssh/ssh_config says that every option is only changed the first time around, so defaults at the end.
+
+Host matlab1
+     HostName matlab1.oce.orst.edu
+Host matlab2
+     HostName matlab2.oce.orst.edu
+Host matlab3
+     HostName matlab3.oce.orst.edu
+Host matlab3
+     HostName matlab4.oce.orst.edu
+Host matlab5
+     HostName matlab5.oce.orst.edu
+
+Host matlab*
+     User dcherian
+     IdentityFile ~/.ssh/darya
+
+Host sallyw
+     HostName sallyw.oce.orst.edu
+     User dcherian
+     IdentityFile ~/.ssh/darya
+     Ciphers aes256-ctr,aes192-ctr,aes128-ctr
+
+Host rsync
+     HostName usw-s009.rsync.net
+     User 9675
+     IdentityFile ~/.ssh/rsync-darya
+
 Host github.com
      User git
-     IdentityFile ~/.ssh/github-mac
-     KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
-     PubkeyAuthentication yes
+     IdentityFile ~/.ssh/github-darya
 
 Host router
-     HostName 192.168.1.1
-     KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+     User root
+     HostName 192.168.0.1
 
 Host poison
      HostName poison.whoi.edu
      User deepak
      Compression yes
-     Ciphers blowfish-cbc
-     PubkeyAuthentication yes
      IdentityFile ~/.ssh/kadal
      ForwardX11 yes
      ForwardX11Trusted yes
@@ -44,47 +67,28 @@ Host mohawk-poison
      Compression yes
      ForwardX11 yes
      ForwardX11Trusted yes
-          
-Host scylla
-     HostName scylla-b.whoi.edu
-     User dcherian
-     Ciphers arcfour
-     Compression yes
-     PubkeyAuthentication yes
-     IdentityFile ~/.ssh/kadal
-     ForwardX11 yes
-     ForwardX11Trusted yes
-     
-Host scylla-poison
-     HostName scylla-b.whoi.edu
-     User dcherian
-     ProxyCommand ssh poison -W %h:%p
-     Ciphers blowfish-cbc
-     Compression yes
-     PubkeyAuthentication yes
-     ForwardX11 yes
-     ForwardX11Trusted yes
 
-Host yellowstone
-     HostName yellowstone.ucar.edu
+Host cheyenne
+     HostName cheyenne.ucar.edu
      User dcherian
-     PubkeyAuthentication yes
-     IdentityFile ~/.ssh/kadal
      ForwardX11 yes
      ForwardX11Trusted yes
      Compression yes
-     
-Host aces
-     HostName login.acesgrid.org
+
+Host chdata
+     HostName data-access.ucar.edu
      User dcherian
-     PubkeyAuthentication yes
-     ForwardX11 yes
-     ForwardX11Trusted yes
-     
+     Compression yes
+
+Host sverdrup
+     HostName sverdrup.ldeo.columbia.edu
+     User dcherian
+
 Host *
-#     ControlMaster auto
-#     ControlPath /tmp/ssh_mux_%h_%p_%r
-     PubKeyAuthentication no
+     ControlMaster auto
+     ControlPath /tmp/ssh_mux_%h_%p_%r
+     PubKeyAuthentication yes
+     Compression yes
      UseRoaming no
      ServerAliveInterval 120
      ServerAliveCountMax 3
@@ -97,5 +101,3 @@ Host *
      ForwardAgent no
      ForwardX11trusted no
      HashKnownHosts yes
-     AddKeysToAgent yes
-     UseKeychain yes
