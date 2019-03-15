@@ -20,6 +20,19 @@ export PROJ_LIB=/home/deepak/anaconda3/share/proj/
 # "precise" scrolling
 export MOZ_USE_XINPUT2=1
 
+alias matlab="/usr/local/MATLAB/R2018a/bin/matlab"
+alias matlab.2017a='/usr/local/bin/matlab'
+
+alias o="exo-open"
+
+alias ncdump='/usr/bin/ncdump'
+alias nc-config='/usr/bin/nc-config'
+
+alias e='f -e emacsclient'
+alias fr='f -e FoxitReader'
+alias fo='filename=`find ~/p/ -type f -printf "%P\n" | fzf`; FoxitReader "/home/deepak/p/$filename" &'
+alias mo='filename=`find ~/p/ -type f -printf "%P\n" | fzf`; mupdf "/home/deepak/p/$filename" &'
+
 # hold down Return and get Control_R!
 # http://emacsredux.com/blog/2016/01/30/remap-return-to-control-in-gnu-slash-linux/
 # xmodmap -e "remove Control = Control_R"
