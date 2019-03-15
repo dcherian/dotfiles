@@ -20,7 +20,7 @@ xr.set_options(keep_attrs=True)
 
 import netCDF4 as nc
 import seawater as sw
-import gsw
+# import gsw
 import bottleneck as bn
 
 # for company python completer
