@@ -107,19 +107,22 @@ export PS1=$Color_Off"┌── "$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"}
 [ -f ~/dotfiles/jupyter-completion.bash ] && source ~/dotfiles/jupyter-completion.bash
 [ -f ~/dotfiles/ipython-completion.bash ] && source ~/dotfiles/ipython-completion.bash
 
-[ -f ~/dotfiles/.fzf.bash ] && source ~/dotfiles/.fzf.bash
-
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-# Use ;; as the trigger sequence instead of the default **
-export FZF_COMPLETION_TRIGGER='**'
-
-if [[ $- == *i* ]]; then
-    bind -x '"\C-p": emacsclient $(fzf);'
-fi
-
-complete -F _fzf_path_completion -o default -o bashdefault exo-open
-complete -F _fzf_path_completion -o default -o bashdefault o
-# alias fzf='fzf --color=bg+:#eee8d5,bg:#fdf6e3,spinner:#719e07,hl:#93a1a1,fg:#000000,header:#93a1a1,info:#cb4b16,pointer:#719e07,marker:#719e07,fg+:#657b83,prompt:#719e07,hl+:#719e07'
 
 eval "$(fasd --init auto)"
+
+if [ -f ~/.fzf.bash ]
+then
+   source ~/.fzf.bash
+   export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+   # Use ;; as the trigger sequence instead of the default **
+   export FZF_COMPLETION_TRIGGER='**'
+
+   if [[ $- == *i* ]]; then
+       bind -x '"\C-p": emacsclient $(fzf);'
+   fi
+
+   complete -F _fzf_path_completion -o default -o bashdefault exo-open
+   complete -F _fzf_path_completion -o default -o bashdefault o
+   # alias fzf='fzf --color=bg+:#eee8d5,bg:#fdf6e3,spinner:#719e07,hl:#93a1a1,fg:#000000,header:#93a1a1,info:#cb4b16,pointer:#719e07,marker:#719e07,fg+:#657b83,prompt:#719e07,hl+:#719e07'
+fi
