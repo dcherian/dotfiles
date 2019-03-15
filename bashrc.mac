@@ -21,3 +21,5 @@ export PATH=/Library/TeX/texbin:/usr/local/bin:$PATH
 export PATH="/Users/dcherian/anaconda/bin:$PATH"
 
 . /home/dcherian/anaconda3/etc/profile.d/conda.sh
+
+alias ls='ls -G'
