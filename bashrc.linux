@@ -40,3 +40,5 @@ alias mo='filename=`find ~/p/ -type f -printf "%P\n" | fzf`; mupdf "/home/deepak
 # xmodmap -e "keycode 0x24 = Control_R"
 # xmodmap -e "add Control = Control_R"
 # xcape -t 10000 -e "Control_R=Return"
+
+eval "$(fasd --init auto)"

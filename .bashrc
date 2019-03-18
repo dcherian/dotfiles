@@ -104,12 +104,11 @@ export PS1=$Color_Off"┌── "$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"}
 
 [ -f ~/bashrc.linux ] && source ~/bashrc.linux
 [ -f ~/bashrc.mac ] && source ~/bashrc.mac
+[ -f ~/bashrc.hpc ] && source ~/bashrc.hpc
 [ -f ~/dotfiles/jupyter-completion.bash ] && source ~/dotfiles/jupyter-completion.bash
 [ -f ~/dotfiles/ipython-completion.bash ] && source ~/dotfiles/ipython-completion.bash
 
 export PYTHONPATH="$HOME/python/"
-
-eval "$(fasd --init auto)"
 
 if [ -f ~/.fzf.bash ]
 then
