@@ -1,6 +1,7 @@
 name: dcpy
 channels:
   - conda-forge
+  - pyviz
 dependencies:
   - astropy
   - basemap
@@ -11,33 +12,25 @@ dependencies:
   - cmocean
   - colorcet
   - dask
-  - descartes
   - eofs
-  - esmf
-  - esmpy
-  - fiona
   - flake8
-  - geopandas
-  - geotiff
   - geoviews
   - gsw
   - h5netcdf
   - h5py
   - hdf5
-  - holoplot
+  - hvplot
   - holoviews
   - hypothesis
-  - imageio
   - ipython
   - ipywidgets
-  - iris
   - jupyter
   - jupyterlab
   - line_profiler
   - matplotlib
-  - mayavi
   - mccabe
   - memory_profiler
+  - mtspec
   - nbconvert
   - nbformat
   - notebook
@@ -58,13 +51,9 @@ dependencies:
   - qtconsole
   - scikit-image
   - seaborn
+  - seawater
   - sphinx
   - statsmodels
-  - sympy
   - tqdm
-  - udunits2
-  - uncertainties
-  - versioneer
   - virtualenv
   - viscm
-  - xlsxwriter

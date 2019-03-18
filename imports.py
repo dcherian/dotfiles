@@ -4,7 +4,7 @@ import sys
 hostname = os.uname()[1]
 if hostname == 'darya':
     home = '/home/deepak/'
-elif 'cheyenne' in hostname:
+elif 'cheyenne' in hostname or 'casper' in hostname:
     home = '/glade/u/home/dcherian/'
 elif 'caguas' in hostname:
     home = '/Users/dcherian/'
@@ -20,7 +20,6 @@ import cmocean
 
 warnings.filterwarnings("ignore", message="numpy.dtype size changed")
 import numpy as np
-
 import scipy as sp
 import pandas as pd
 import seaborn as sns
