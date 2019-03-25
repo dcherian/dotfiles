@@ -4,56 +4,59 @@ channels:
   - pyviz
 dependencies:
   - astropy
-  - basemap
-  - bokeh
+  # compute
   - bottleneck
-  - cartopy
-  - cftime
-  - cmocean
-  - colorcet
   - dask
-  - eofs
-  - flake8
-  - geoviews
-  - gsw
+  - mtspec
+  - numba
+  - numcodecs
+  - numexpr
+  - numpy
+  - pandas
+  - pykdtree
+  - scikit-image
+  - scipy
+  - statsmodels
+  # netcdf
+  - cftime
   - h5netcdf
   - h5py
-  - hdf5
-  - hvplot
-  - holoviews
-  - hypothesis
+  # ipython / jupyter
   - ipython
   - ipywidgets
   - jupyter
   - jupyterlab
-  - line_profiler
-  - matplotlib
-  - mccabe
-  - memory_profiler
-  - mtspec
   - nbconvert
   - nbformat
+  - nodejs
   - notebook
-  - numba
-  - numcodecs
-  - numexpr
-  - numpydoc
-  - pandas
-  - pandoc
-  - pep8
-  - pillow
-  - pip
-  - pygments
-  - pyjwt
-  - pykdtree
-  - pylint
-  - pywavelets
   - qtconsole
-  - scikit-image
+  # visualization
+  - cartopy
+  - cmocean
+  - hvplot
+  - holoviews
+  - geoviews
+  - matplotlib
+  - pillow
   - seaborn
+  - widgetsnbextension
+  # debugging
+  - line_profiler
+  - memory_profiler
+  # lint
+  - flake8
+  - pep8
+  - pylint
   - seawater
+  - numpydoc
   - sphinx
-  - statsmodels
   - tqdm
   - virtualenv
-  - viscm
+  - pip
+  - pip:
+    - airsea
+    - ipympl
+    - jupyter-server-proxy
+    - ncar-jobqueue
+    - git+https://github.com/dask/dask-jobqueue.git
