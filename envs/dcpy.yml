@@ -47,6 +47,7 @@ dependencies:
   - pyjwt
   - pykdtree
   - pylint
+  - python-graphviz
   - pywavelets
   - qtconsole
   - scikit-image
