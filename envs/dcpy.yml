@@ -3,8 +3,8 @@ channels:
   - conda-forge
   - pyviz
 dependencies:
-  - astropy
   - basemap
+  - black
   - bokeh
   - bottleneck
   - cartopy
@@ -12,7 +12,6 @@ dependencies:
   - cmocean
   - colorcet
   - dask
-  - eofs
   - flake8
   - geoviews
   - gsw
@@ -21,14 +20,17 @@ dependencies:
   - hdf5
   - hvplot
   - holoviews
-  - hypothesis
+  - ipdb
   - ipython
-  - ipywidgets
+  - iris
   - jupyter
   - jupyterlab
+  - jupyter_contrib_nbextensions
+  - jupyter-server-proxy
   - line_profiler
+  - lxml # sciviscolor etc.
   - matplotlib
-  - mccabe
+  - mypy
   - memory_profiler
   - mtspec
   - nbconvert
@@ -36,7 +38,6 @@ dependencies:
   - notebook
   - numba
   - numcodecs
-  - numexpr
   - numpydoc
   - pandas
   - pandoc
@@ -47,6 +48,8 @@ dependencies:
   - pyjwt
   - pykdtree
   - pylint
+  - pytest
+  - pytest-xdist
   - python-graphviz
   - pywavelets
   - qtconsole
@@ -55,6 +58,10 @@ dependencies:
   - seawater
   - sphinx
   - statsmodels
+  - tornado==5.1.1
   - tqdm
   - virtualenv
   - viscm
+  - xgcm
+  - xmitgcm
+  - zarr
