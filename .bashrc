@@ -108,8 +108,6 @@ export PS1=$Color_Off"┌── "$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"}
 [ -f ~/dotfiles/jupyter-completion.bash ] && source ~/dotfiles/jupyter-completion.bash
 [ -f ~/dotfiles/ipython-completion.bash ] && source ~/dotfiles/ipython-completion.bash
 
-export PYTHONPATH="$HOME/python/"
-
 if [ -f ~/.fzf.bash ]
 then
    source ~/.fzf.bash
