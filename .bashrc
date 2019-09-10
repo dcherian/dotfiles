@@ -5,8 +5,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# append to the history file, don't overwrite it
-shopt -s histappend
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -124,3 +122,5 @@ then
    complete -F _fzf_path_completion -o default -o bashdefault o
    # alias fzf='fzf --color=bg+:#eee8d5,bg:#fdf6e3,spinner:#719e07,hl:#93a1a1,fg:#000000,header:#93a1a1,info:#cb4b16,pointer:#719e07,marker:#719e07,fg+:#657b83,prompt:#719e07,hl+:#719e07'
 fi
+
+export PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
