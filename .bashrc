@@ -98,7 +98,8 @@ Jobs="\j"
 User="\u"
 Host="\h"
 
-export PS1=$Color_Off"┌── "$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off"\n└──────> "
+#export PS1=$Color_Off"┌── "$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off"\n└──────> "
+export PS1=$Color_Off$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off
 
 [ -f ~/bashrc.linux ] && source ~/bashrc.linux
 [ -f ~/bashrc.mac ] && source ~/bashrc.mac
