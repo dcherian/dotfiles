@@ -98,8 +98,12 @@ Jobs="\j"
 User="\u"
 Host="\h"
 
+export PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
+
+source ~/dotfiles/git-prompt.sh
 #export PS1=$Color_Off"┌── "$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off"\n└──────> "
-export PS1=$Color_Off$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off
+export PS1=$Color_Off$Time24h$Purple' ['$Host"]"$Blue" {"$PathFull"}"$Color_Off"\n──────> "
+# export PS1='[]\$ '
 
 [ -f ~/bashrc.linux ] && source ~/bashrc.linux
 [ -f ~/bashrc.mac ] && source ~/bashrc.mac
@@ -123,5 +127,3 @@ then
    complete -F _fzf_path_completion -o default -o bashdefault o
    # alias fzf='fzf --color=bg+:#eee8d5,bg:#fdf6e3,spinner:#719e07,hl:#93a1a1,fg:#000000,header:#93a1a1,info:#cb4b16,pointer:#719e07,marker:#719e07,fg+:#657b83,prompt:#719e07,hl+:#719e07'
 fi
-
-export PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
