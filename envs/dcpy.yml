@@ -12,6 +12,8 @@ dependencies:
   - cmocean
   - colorcet
   - dask
+  - dask_jobqueue
+  - distributed
   - flake8
   - geoviews
   - gsw
