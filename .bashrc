@@ -100,7 +100,9 @@ Host="\h"
 
 export PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
-source ~/dotfiles/git-prompt.sh
+if [ -f ~/dotfiles/git-prompt.sh ]; then
+    source ~/dotfiles/git-prompt.sh
+fi
 #export PS1=$Color_Off"┌── "$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off"\n└──────> "
 export PS1=$Color_Off$Time24h$Purple' ['$Host"]"$Blue" {"$PathFull"}"$Color_Off"\n──────> "
 # export PS1='[]\$ '
