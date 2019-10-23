@@ -35,6 +35,7 @@ dependencies:
   - mtspec
   - nbconvert
   - nbformat
+  - nc-time-axis
   - notebook
   - numba
   - numcodecs
@@ -58,6 +59,7 @@ dependencies:
   - seawater
   - sphinx
   - statsmodels
+  - tabulate
   - tornado==5.1.1
   - tqdm
   - virtualenv
