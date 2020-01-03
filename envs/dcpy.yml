@@ -12,6 +12,7 @@ dependencies:
   - cmocean
   - colorcet
   - dask
+  - distributed
   - flake8
   - geoviews
   - gsw
@@ -60,7 +61,7 @@ dependencies:
   - sphinx
   - statsmodels
   - tabulate
-  - tornado==5.1.1
+  - tornado
   - tqdm
   - virtualenv
   - viscm
