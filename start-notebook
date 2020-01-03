@@ -1,0 +1,155 @@
+#!/bin/bash
+
+# Check if running on login nodes
+JNHOST=$(hostname)
+
+if [[ $JNHOST == cheyenne* ]]; then
+cat << EOF
+Running a Jupyter Notebook is no longer supported on the login nodes. Please
+start an interactive batch session on Cheyenne using qinteractive, or on the
+data analysis machines using execdav, and then rerun this script.
+EOF
+
+exit 2
+fi
+
+# Create trap to kill notebook when user is done
+function kill_server {
+	if [[ $JNPID != -1 ]]; then
+    	echo -e "\nKilling Jupyter Notebook Server with PID=$JNPID ..."
+		kill $JNPID >& /dev/null
+		exit 0
+	else
+		exit 1
+	fi
+}
+
+function print_log {
+    echo "${1}! Printing log ..."
+    echo "---"
+    cat $LOGFILE
+    echo "---"
+}
+
+JNPID=-1
+trap kill_server SIGHUP SIGINT SIGTERM
+
+# Define function to detect corrupted JSON files
+function check_json {
+python << EOF
+import glob
+import os
+import json
+
+home = os.environ['HOME']
+dirs = ['.jupyter/nbconfig/','.local/share/jupyter/runtime']
+
+for d in dirs:
+    for p in glob.glob(os.path.join(home, d, '*.json')):
+        try:
+            with open(p, 'r') as f:
+                json.load(f)
+        except json.decoder.JSONDecodeError:
+            print(p)
+EOF
+}
+
+# Begin server creation
+LOGDIR=/home/${USER}/.jupyter-notebook
+LOGFILE=${LOGDIR}/log.$(date +%Y%m%dT%H%M%S)
+mkdir -p $LOGDIR
+
+echo "Logging this session in $LOGFILE"
+
+jupyter notebook $@ --no-browser --ip=$JNHOST >& $LOGFILE &
+JNPID=$!
+ELAPSED=0
+
+echo -e "\nStarting jupyter notebook server, please wait ..."
+
+while ! $(grep -Fq -e "ERROR" -e "Notebook is running" $LOGFILE >& /dev/null); do
+    sleep 1
+    ELAPSED=$(($ELAPSED+1))
+
+    if [[ $ELAPSED -gt 30 ]]; then
+        print_log "TIMEOUT: could not create server"
+		kill_server
+    fi
+done
+
+# Get notebook settings
+JNOUT=$(jupyter notebook list --json 2>&1)
+
+# If error is encountered, check for corrupted JSON file
+if [[ $? != 0 ]]; then
+    BADFILES=$(check_json)
+
+    if [[ ${BADFILES}z != z ]]; then
+        for BF in $BADFILES; do
+            rm $BF
+        done
+
+        # Try again and if we fail again, quit
+        JNOUT=$(jupyter notebook list --json 2>&1)
+
+        if [[ $? != 0 ]]; then
+            echo "$JNOUT"
+            print_log "ERROR: notebook list failed"
+            kill_server
+        fi
+    else
+        echo "$JNOUT"
+        print_log "ERROR: notebook list failed"
+        kill_server
+    fi
+fi
+
+# Search for specific server with our PID
+JNOUT=$(echo "$JNOUT" | grep $JNPID)
+FIELDS="'{} {} {} {}'.format(d['port'],d['url'],d['password'],d['token'])"
+JNDATA=$(python -c "import sys, json; d = json.load(sys.stdin); print($FIELDS)" <<< $JNOUT)
+read PORT ADDRESS PWBOOL TOKEN <<< $JNDATA
+
+if [[ $JNHOST == ch* || $JNHOST == r* ]]; then
+    TUNNEL="ssh -N -l $USER -L 8888:${JNHOST}:$PORT cheyenne.ucar.edu"
+else
+    TUNNEL="ssh -N -l $USER -L 8888:${JNHOST}:$PORT ${JNHOST}"
+fi
+
+cat << EOF
+Run the following command on your desktop or laptop:
+
+    $TUNNEL
+
+Log in with your YubiKey/Cryptocard (there will be no prompt).
+Then open a browser and go to http://localhost:8888.
+
+EOF
+
+if [[ $PWBOOL == "True" ]]; then
+echo "The Jupyter web interface will ask you for your preset password."
+elif [[ -n $TOKEN ]]; then
+cat << EOF
+The Jupyter web interface will ask you for this token:
+
+    $TOKEN
+
+Note that anyone to whom you give the token can access (and modify/delete)
+files in your GLADE spaces, regardless of the file permissions you
+have set. SHARE TOKENS RARELY AND WISELY!
+EOF
+else
+tput setaf 1
+cat << EOF
+WARNING: This server is not using token or password authentication. Running
+an unprotected server is dangerous, as any other user could tunnel to
+this port and gain access to your GLADE file spaces. Consider stopping
+this server and restarting with an authentication method active.
+EOF
+tput sgr 0
+fi
+
+echo -e "\nTo stop the server, press Ctrl-C."
+
+# Wait for user kill command
+sleep inf
