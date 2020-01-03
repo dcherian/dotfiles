@@ -4,3 +4,4 @@ channels:
   
 show_channel_urls: True
 always_yes: no
+channel_priority: strict
