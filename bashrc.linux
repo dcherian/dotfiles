@@ -1,3 +1,5 @@
+#-*-shell-script-*-
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -13,9 +15,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-#-*-shell-script-*-
 [ -f /usr/share/autojump/autojump.bash ] && . /usr/share/autojump/autojump.bash
-[[ -s $HOME/.autojump/share/autojump/autojump.sh ]] && source $HOME/.autojump/share/autojump/autojump.sh
+[[ -s $HOME/.autojump/share/autojump/autojump.bash ]] && source $HOME/.autojump/share/autojump/autojump.bash
 
 if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
@@ -24,7 +25,7 @@ fi
 eval `dircolors ~/.dir_colors`
 
 # added by Anaconda3 4.3.0 installer
-export  PATH=$HOME/miniconda3/condabin:$HOME/.local/bin/:/usr/local/bin:/usr/local/texlive/2018/bin/x86_64-linux/:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+export  PATH=$HOME/.autojump/bin/:$HOME/miniconda3/condabin:$HOME/.local/bin/:/usr/local/bin:/usr/local/texlive/2018/bin/x86_64-linux/:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 export QT_STYLE_OVERRIDE=gtk
 
