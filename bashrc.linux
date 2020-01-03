@@ -15,7 +15,7 @@ unset __conda_setup
 
 #-*-shell-script-*-
 [ -f /usr/share/autojump/autojump.bash ] && . /usr/share/autojump/autojump.bash
-[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
+[[ -s $HOME/.autojump/share/autojump/autojump.sh ]] && source $HOME/.autojump/share/autojump/autojump.sh
 
 if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
