@@ -1,5 +1,6 @@
 #-*-shell-script-*-
 [ -f /usr/share/autojump/autojump.bash ] && . /usr/share/autojump/autojump.bash
+[ -f $HOME/autojump/autojump.bash ] && . $HOME/autojump/autojump.bash
 
 if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
