@@ -3,7 +3,7 @@
 debug_print("Window Name: " .. get_window_name());
 debug_print("Application name: " .. get_application_name())
 
-if (get_application_name() == "Rhythmbox") or (get_application_name() == "Signal Beta") or (get_application_name() == "emacs")then
+if (get_application_name() == "Rhythmbox") or (get_application_name() == "Signal Beta") or (get_application_name() == "emacs") or (get_application_name() == "KeePassXC") then
    pin_window();
 end
 

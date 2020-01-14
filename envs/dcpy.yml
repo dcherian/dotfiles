@@ -3,60 +3,68 @@ channels:
   - conda-forge
   - pyviz
 dependencies:
-  - astropy
-  # compute
+  - basemap
+  - black
+  - bokeh
   - bottleneck
-  - dask
-  - mtspec
-  - numba
-  - numcodecs
-  - numexpr
-  - numpy
-  - pandas
-  - pykdtree
-  - scikit-image
-  - scipy
-  - statsmodels
-  # netcdf
+  - cartopy
   - cftime
+  - cmocean
+  - colorcet
+  - dask
+  - distributed
+  - flake8
+  - geoviews
+  - gsw
   - h5netcdf
   - h5py
-  # ipython / jupyter
-  - ipython
-  - ipywidgets
-  - jupyter
-  - jupyterlab
-  - nbconvert
-  - nbformat
-  - nodejs
-  - notebook
-  - qtconsole
-  # visualization
-  - cartopy
-  - cmocean
+  - hdf5
   - hvplot
   - holoviews
-  - geoviews
-  - matplotlib
-  - pillow
-  - seaborn
-  - widgetsnbextension
-  # debugging
+  - ipdb
+  - ipython
+  - iris
+  - jupyter
+  - jupyterlab
+  - jupyter_contrib_nbextensions
+  - jupyter-server-proxy
   - line_profiler
+  - lxml # sciviscolor etc.
+  - matplotlib
+  - mypy
   - memory_profiler
-  # lint
-  - flake8
-  - pep8
-  - pylint
-  - seawater
+  - mtspec
+  - nbconvert
+  - nbformat
+  - nc-time-axis
+  - notebook
+  - numba
+  - numcodecs
   - numpydoc
+  - pandas
+  - pandoc
+  - pep8
+  - pillow
+  - pip
+  - pygments
+  - pyjwt
+  - pykdtree
+  - pylint
+  - pytest
+  - pytest-xdist
+  - python-graphviz
+  - pywavelets
+  - qtconsole
+  - scikit-image
+  - seaborn
+  - seawater
   - sphinx
+  - statsmodels
+  - tabulate
+  - tornado
   - tqdm
   - virtualenv
-  - pip
-  - pip:
-    - airsea
-    - ipympl
-    - jupyter-server-proxy
-    - ncar-jobqueue
-    - git+https://github.com/dask/dask-jobqueue.git
+  - viscm
+  - xgcm
+  - xmitgcm
+  - zarr

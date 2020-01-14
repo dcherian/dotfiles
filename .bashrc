@@ -5,8 +5,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# append to the history file, don't overwrite it
-shopt -s histappend
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -100,15 +98,20 @@ Jobs="\j"
 User="\u"
 Host="\h"
 
-export PS1=$Color_Off"┌── "$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off"\n└──────> "
+export PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
+
+if [ -f ~/dotfiles/git-prompt.sh ]; then
+    source ~/dotfiles/git-prompt.sh
+fi
+#export PS1=$Color_Off"┌── "$Time24h$Purple" ["$Host"]"$Blue" {"$PathFull"} "$Color_Off"\n└──────> "
+export PS1=$Color_Off$Time24h$Purple' ['$Host"]"$Blue" {"$PathFull"}"$Color_Off"\n──────> "
+# export PS1='[]\$ '
 
 [ -f ~/bashrc.linux ] && source ~/bashrc.linux
 [ -f ~/bashrc.mac ] && source ~/bashrc.mac
 [ -f ~/bashrc.hpc ] && source ~/bashrc.hpc
 [ -f ~/dotfiles/jupyter-completion.bash ] && source ~/dotfiles/jupyter-completion.bash
 [ -f ~/dotfiles/ipython-completion.bash ] && source ~/dotfiles/ipython-completion.bash
-
-export PYTHONPATH="$HOME/python/"
 
 if [ -f ~/.fzf.bash ]
 then
