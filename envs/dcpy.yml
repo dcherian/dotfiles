@@ -12,6 +12,7 @@ dependencies:
   - cmocean
   - colorcet
   - dask
+  - datashader
   - distributed
   - flake8
   - geoviews
@@ -21,6 +22,8 @@ dependencies:
   - hdf5
   - hvplot
   - holoviews
+  - intake
+  - intake-esm
   - ipdb
   - ipython
   - iris
@@ -37,6 +40,7 @@ dependencies:
   - nbconvert
   - nbformat
   - nc-time-axis
+  - nodejs
   - notebook
   - numba
   - numcodecs
@@ -65,6 +69,10 @@ dependencies:
   - tqdm
   - virtualenv
   - viscm
+  - xarray
   - xgcm
   - xmitgcm
   - zarr
+pip:
+  - dask_jobqueue
+  - ncar_jobqueue
