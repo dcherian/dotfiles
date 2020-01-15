@@ -37,6 +37,7 @@ dependencies:
   - nbconvert
   - nbformat
   - nc-time-axis
+  - nodejs
   - notebook
   - numba
   - numcodecs
