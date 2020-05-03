@@ -31,10 +31,6 @@ Host github.com
      User git
      IdentityFile ~/.ssh/github-darya
 
-Host router
-     User root
-     HostName 192.168.0.1
-
 Host poison
      HostName poison.whoi.edu
      User deepak
@@ -79,9 +75,32 @@ Host chdata
      User dcherian
      Compression yes
 
+Host hobart
+     HostName hobart.cgd.ucar.edu
+     User dcherian
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     Compression yes
+
+Host andre
+     HostName andre.cgd.ucar.edu
+     User dcherian
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     Compression yes
+
+Host *.ucar.edu
+     User dcherian
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     Compression yes
+
 Host sverdrup
      HostName sverdrup.ldeo.columbia.edu
      User dcherian
+     ForwardX11 yes
+     ForwardX11Trusted yes
+     Compression yes
 
 Host *
      ControlMaster auto
