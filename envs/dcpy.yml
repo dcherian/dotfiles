@@ -3,7 +3,6 @@ channels:
   - conda-forge
   - pyviz
 dependencies:
-  - basemap
   - black
   - bokeh
   - bottleneck
@@ -23,6 +22,7 @@ dependencies:
   - holoviews
   - ipdb
   - ipython
+  - ipywidgets
   - iris
   - jupyter
   - jupyterlab
@@ -51,6 +51,7 @@ dependencies:
   - pyjwt
   - pykdtree
   - pylint
+  - pyresample
   - pytest
   - pytest-xdist
   - python-graphviz
@@ -66,6 +67,7 @@ dependencies:
   - tqdm
   - virtualenv
   - viscm
+  - xarray
   - xgcm
   - xmitgcm
   - zarr
