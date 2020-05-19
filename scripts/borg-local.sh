@@ -1,5 +1,5 @@
-REPOSITORY=/media/osu-backup-1/backup/
-# REPOSITORY=/media/deepak/passport/backup/
+# REPOSITORY=/media/osu-backup-1/backup/
+REPOSITORY=/media/deepak/passport/backup/
 
 export BORG_PASSPHRASE=''
 
