@@ -29,6 +29,7 @@ dependencies:
   - iris
   - jupyter
   - jupyterlab
+  - jupyterlab_code_formatter
   - jupyter_contrib_nbextensions
   - jupyter-server-proxy
   - line_profiler
