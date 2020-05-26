@@ -11,9 +11,5 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager \
                              dask-labextension \
 			     @pyviz/jupyterlab_pyviz \
 			     @bokeh/jupyter_bokeh
-                             
 
-jupyter labextension update --all
-
-conda uninstall --force --offline xarray
-cd $HOME/python/xarray && pip install -e .
+jupyter serverextension enable --py jupyterlab_code_formatter
