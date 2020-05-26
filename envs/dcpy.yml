@@ -11,6 +11,7 @@ dependencies:
   - cmocean
   - colorcet
   - dask
+  - dask_labextension
   - datashader
   - distributed
   - flake8

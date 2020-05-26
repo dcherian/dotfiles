@@ -10,7 +10,8 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager \
                              @jupyterlab/toc \
                              dask-labextension \
 			     @pyviz/jupyterlab_pyviz \
-			     @bokeh/jupyter_bokeh
+			     @bokeh/jupyter_bokeh \
+                             @ryantam626/jupyterlab_code_formatter
 
 jupyter serverextension enable --py jupyterlab_code_formatter
 
