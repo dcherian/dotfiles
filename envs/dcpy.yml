@@ -1,4 +1,4 @@
-name: dcpy
+name: dcpy2
 channels:
   - conda-forge
   - pyviz
@@ -72,9 +72,11 @@ dependencies:
   - virtualenv
   - viscm
   - xarray
+  - xrft
   - xgcm
+  - xhistogram
   - xmitgcm
   - zarr
-pip:
-  - dask_jobqueue
-  - ncar_jobqueue
+  - pip:
+    - dask_jobqueue
+    - ncar_jobqueue
