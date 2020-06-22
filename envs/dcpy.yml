@@ -1,4 +1,4 @@
-name: dcpy2
+name: dcpy
 channels:
   - conda-forge
   - pyviz
