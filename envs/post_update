@@ -1,0 +1,2 @@
+conda uninstall --force --offline -y xarray
+cd $HOME/python/xarray && pip install -e .

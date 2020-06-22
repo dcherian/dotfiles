@@ -5,5 +5,4 @@ set -xeo pipefail
 conda update --all
 jupyter labextension update --all
 
-conda uninstall --force --offline xarray
-cd $HOME/python/xarray && pip install -e .
+./post_update
