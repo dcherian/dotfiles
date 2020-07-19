@@ -27,6 +27,7 @@ dependencies:
   - intake
   - intake-esm
   - ipdb
+  - ipympl
   - ipython
   - ipywidgets
   - iris
