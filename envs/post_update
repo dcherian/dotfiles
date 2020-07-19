@@ -1,2 +1,3 @@
+conda install --force-reinstall dask-jobqueue
 conda uninstall --force --offline -y xarray
 cd $HOME/python/xarray && pip install -e .
