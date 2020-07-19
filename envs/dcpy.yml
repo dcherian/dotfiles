@@ -1,4 +1,4 @@
-name: dcpy2
+name: dcpy
 channels:
   - conda-forge
   - pyviz
@@ -6,6 +6,7 @@ dependencies:
   - black
   - bokeh
   - bottleneck
+  - cachey
   - cartopy
   - cftime
   - cmocean
@@ -22,9 +23,11 @@ dependencies:
   - hdf5
   - hvplot
   - holoviews
+  - icc_rt  # for numba
   - intake
   - intake-esm
   - ipdb
+  - ipympl
   - ipython
   - ipywidgets
   - iris
