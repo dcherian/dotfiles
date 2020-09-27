@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -xeo pipefail
+
+conda update --all
+jupyter labextension update --all
+
+./post_update

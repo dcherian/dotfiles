@@ -3,16 +3,18 @@ channels:
   - conda-forge
   - pyviz
 dependencies:
-  - basemap
   - black
   - bokeh
   - bottleneck
+  - cachey
   - cartopy
   - cftime
   - cmocean
   - colorcet
   - dask
   - dask-jobqueue
+  - dask_labextension
+  - datashader
   - distributed
   - flake8
   - geoviews
@@ -22,11 +24,17 @@ dependencies:
   - hdf5
   - hvplot
   - holoviews
+  - icc_rt  # for numba
+  - intake
+  - intake-esm
   - ipdb
+  - ipympl
   - ipython
+  - ipywidgets
   - iris
   - jupyter
   - jupyterlab
+  - jupyterlab_code_formatter
   - jupyter_contrib_nbextensions
   - jupyter-server-proxy
   - line_profiler
@@ -36,6 +44,7 @@ dependencies:
   - memory_profiler
   - mtspec
   - nbconvert
+  - nbdime
   - nbformat
   - nc-time-axis
   - nodejs
@@ -43,7 +52,7 @@ dependencies:
   - numba
   - numcodecs
   - numpydoc
-  - pandas
+  - pandas<1.1.0
   - pandoc
   - pep8
   - pillow
@@ -52,6 +61,7 @@ dependencies:
   - pyjwt
   - pykdtree
   - pylint
+  - pyresample
   - pytest
   - pytest-xdist
   - python-graphviz
@@ -67,6 +77,12 @@ dependencies:
   - tqdm
   - virtualenv
   - viscm
+  - xarray
+  - xrft
   - xgcm
+  - xhistogram
   - xmitgcm
   - zarr
+  - pip:
+    - dask_jobqueue
+    - ncar_jobqueue

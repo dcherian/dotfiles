@@ -9,6 +9,41 @@ fi
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# Enable history expansion with space
+# E.g. typing !!<space> will replace the !! with your last command
+bind Space:magic-space
+
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob;
+
+# Treat hyphens and underscores as equivalent
+bind "set completion-map-case on"
+
+# Display matches for ambiguous patterns at first tab press
+bind "set show-all-if-ambiguous on"
+
+# Immediately add a trailing slash when autocompleting symlinks to directories
+bind "set mark-symlinked-directories on"
+
+## SANE HISTORY DEFAULTS ##
+
+# Append to the history file, don't overwrite it
+shopt -s histappend
+
+# Save multi-line commands as one command
+shopt -s cmdhist
+
+# Don't record some commands
+export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
+
+# Prepend cd to directory names automatically
+shopt -s autocd 2> /dev/null
+# Correct spelling errors during tab-completion
+shopt -s dirspell 2> /dev/null
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell 2> /dev/null
+
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=50000
 HISTFILESIZE=50000
@@ -129,3 +164,22 @@ then
    complete -F _fzf_path_completion -o default -o bashdefault o
    # alias fzf='fzf --color=bg+:#eee8d5,bg:#fdf6e3,spinner:#719e07,hl:#93a1a1,fg:#000000,header:#93a1a1,info:#cb4b16,pointer:#719e07,marker:#719e07,fg+:#657b83,prompt:#719e07,hl+:#719e07'
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/deepak/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/deepak/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/deepak/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/deepak/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+source /home/deepak/.bash_completions/jupyter-forward.sh
+
