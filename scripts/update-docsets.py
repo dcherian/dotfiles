@@ -2,9 +2,17 @@
 import subprocess
 import tqdm
 
-for name in tqdm.tqdm(["dask", "xarray", "distributed", "numba",
-                       # "xgcm"
-                       ]):
+for name in tqdm.tqdm(
+    [
+        "dask",
+        "xarray",
+        "distributed",
+        "numba",
+        "cartopy",
+        "xgcm",
+        "sparse",
+    ]
+):
     url = f"https://raw.githubusercontent.com/andersy005/dash-docsets/docsets/docsets/{name}.tgz"
     file = f"/tmp/{name}.tgz"
     subprocess.run(["wget", url, "-O", file])
