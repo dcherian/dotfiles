@@ -36,6 +36,7 @@ dependencies:
   - jupyterlab_code_formatter
   - jupyter-server-proxy
   - line_profiler
+  - mamba
   - matplotlib
   - mypy
   - memory_profiler
