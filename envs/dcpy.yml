@@ -12,7 +12,7 @@ dependencies:
   - cmocean
   - colorcet
   - dask
-  - dask_jobqueue
+  - dask-jobqueue
   - dask_labextension
   - datashader
   - distributed
@@ -45,7 +45,7 @@ dependencies:
   - nbdime
   - nbformat
   - nc-time-axis
-  - ncar_jobqueue
+  - ncar-jobqueue
   - nodejs
   - notebook
   - numba
