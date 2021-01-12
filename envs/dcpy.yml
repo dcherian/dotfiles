@@ -12,6 +12,7 @@ dependencies:
   - cmocean
   - colorcet
   - dask
+  - dask-jobqueue
   - dask_labextension
   - datashader
   - distributed
@@ -23,7 +24,6 @@ dependencies:
   - hdf5
   - hvplot
   - holoviews
-  - icc_rt  # for numba
   - intake
   - intake-esm
   - ipdb
@@ -34,23 +34,24 @@ dependencies:
   - jupyter
   - jupyterlab
   - jupyterlab_code_formatter
-  - jupyter_contrib_nbextensions
   - jupyter-server-proxy
   - line_profiler
-  - lxml # sciviscolor etc.
+  - mamba
   - matplotlib
   - mypy
   - memory_profiler
   - mtspec
   - nbconvert
+  - nbdime
   - nbformat
   - nc-time-axis
+  - ncar-jobqueue
   - nodejs
   - notebook
   - numba
   - numcodecs
   - numpydoc
-  - pandas<1.1.0
+  - pandas!=1.1.0
   - pandoc
   - pep8
   - pillow
@@ -69,7 +70,6 @@ dependencies:
   - seaborn
   - seawater
   - sphinx
-  - statsmodels
   - tabulate
   - tornado
   - tqdm
@@ -81,6 +81,3 @@ dependencies:
   - xhistogram
   - xmitgcm
   - zarr
-  - pip:
-    - dask_jobqueue
-    - ncar_jobqueue

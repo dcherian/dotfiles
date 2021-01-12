@@ -25,15 +25,15 @@ fi
 eval `dircolors ~/.dir_colors`
 
 # added by Anaconda3 4.3.0 installer
-export  PATH=$HOME/.autojump/bin/:$HOME/miniconda3/condabin:$HOME/.local/bin/:/usr/local/bin:/usr/local/texlive/2018/bin/x86_64-linux/:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+export PATH=$HOME/.autojump/bin/:$HOME/miniconda3/condabin:$HOME/.local/bin/:/usr/local/bin:/usr/local/texlive/2018/bin/x86_64-linux/:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 export QT_STYLE_OVERRIDE=gtk
 
 # "precise" scrolling
 export MOZ_USE_XINPUT2=1
 
-alias matlab="/usr/local/MATLAB/R2018a/bin/matlab"
-alias matlab.2017a='/usr/local/bin/matlab'
+# alias matlab="/usr/local/MATLAB/R2018a/bin/matlab"
+# alias matlab.2017a='/usr/local/bin/matlab'
 
 alias o="exo-open"
 
