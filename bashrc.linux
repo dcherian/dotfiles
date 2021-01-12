@@ -27,7 +27,9 @@ eval `dircolors ~/.dir_colors`
 # added by Anaconda3 4.3.0 installer
 export PATH=$HOME/.autojump/bin/:$HOME/miniconda3/condabin:$HOME/.local/bin/:/usr/local/bin:/usr/local/texlive/2018/bin/x86_64-linux/:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
-export QT_STYLE_OVERRIDE=gtk
+# QT settings
+# export QT_STYLE_OVERRIDE=gtk2
+export GTK_USE_PORTAL=1
 
 # "precise" scrolling
 export MOZ_USE_XINPUT2=1
