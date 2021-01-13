@@ -5,7 +5,7 @@ JNHOST=$(hostname)
 
 if [[ $JNHOST == cheyenne* ]]; then
 cat << EOF
-Running a Jupyter Notebook is no longer supported on the login nodes. Please
+Running a Jupyter server is no longer supported on the login nodes. Please
 start an interactive batch session on Cheyenne using qinteractive, or on the
 data analysis machines using execdav, and then rerun this script.
 EOF
@@ -55,19 +55,19 @@ EOF
 }
 
 # Begin server creation
-LOGDIR=/glade/scratch/${USER}/.jupyter-notebook
+LOGDIR=/glade/scratch/${USER}/.jupyter-lab
 LOGFILE=${LOGDIR}/log.$(date +%Y%m%dT%H%M%S)
 mkdir -p $LOGDIR
 
 echo "Logging this session in $LOGFILE"
 
-jupyter notebook $@ --no-browser --ip=$JNHOST >& $LOGFILE &
+jupyter lab $@ --no-browser --ip=$JNHOST >& $LOGFILE &
 JNPID=$!
 ELAPSED=0
 
-echo -e "\nStarting jupyter notebook server, please wait ..."
+echo -e "\nStarting JupyterLab server, please wait ..."
 
-while ! $(grep -Fq -e "ERROR" -e "Notebook is running" $LOGFILE >& /dev/null); do
+while ! $(grep -Fq -e "ERROR" -e " is running" $LOGFILE >& /dev/null); do
     sleep 1
     ELAPSED=$(($ELAPSED+1))
 
