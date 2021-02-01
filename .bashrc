@@ -181,5 +181,5 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-source /home/deepak/.bash_completions/jupyter-forward.sh
+source $HOME/.bash_completions/jupyter-forward.sh
 
