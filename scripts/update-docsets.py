@@ -13,7 +13,7 @@ for name in tqdm.tqdm(
         "sparse",
     ]
 ):
-    url = f"https://raw.githubusercontent.com/andersy005/dash-docsets/docsets/docsets/{name}.tgz"
-    file = f"/tmp/{name}.tgz"
+    url = f"https://raw.githubusercontent.com/andersy005/dash-docsets/docsets/docsets/{name}.tar.xz"
+    file = f"/tmp/{name}.xz"
     subprocess.run(["wget", url, "-O", file])
     subprocess.run(["tar", "-xvf", file, "--directory", "/home/deepak/docs/docsets/"])
