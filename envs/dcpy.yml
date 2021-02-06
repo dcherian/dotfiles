@@ -73,6 +73,7 @@ dependencies:
   - tabulate
   - tornado
   - tqdm
+  - watermark
   - virtualenv
   - viscm
   - xarray
