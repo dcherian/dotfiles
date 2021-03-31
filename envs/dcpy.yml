@@ -81,3 +81,5 @@ dependencies:
   - xhistogram
   - xmitgcm
   - zarr
+  - pip:
+    - icecream
