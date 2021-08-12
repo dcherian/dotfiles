@@ -24,7 +24,6 @@ dependencies:
   - hdf5
   - hvplot
   - holoviews
-  - icc_rt  # for numba
   - intake
   - intake-esm
   - ipdb
