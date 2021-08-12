@@ -1,0 +1,23 @@
+name: base
+channels:
+  - conda-forge
+  - pyviz
+dependencies:
+  - jupyterlab
+  - nb_conda_kernels
+  - emacs
+  - fzf
+  - jupyter-forward
+  - black
+  - isort
+  - flake8
+  - pre-commit
+  - mypy
+  - pyflakes
+  - pycodestyle
+  - pip:
+    - python-lsp-server
+    - python-lsp-black
+    - pyls-flake8
+    - mypy-ls
+    - pyls-isort
