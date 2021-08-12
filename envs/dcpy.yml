@@ -9,6 +9,7 @@ dependencies:
   - cachey
   - cartopy
   - cftime
+  - cf_xarray
   - cmocean
   - colorcet
   - dask
@@ -34,10 +35,9 @@ dependencies:
   - jupyter
   - jupyterlab
   - jupyterlab_code_formatter
-  - jupyter_contrib_nbextensions
   - jupyter-server-proxy
   - line_profiler
-  - lxml # sciviscolor etc.
+  - mamba
   - matplotlib
   - mypy
   - memory_profiler
@@ -46,34 +46,38 @@ dependencies:
   - nbdime
   - nbformat
   - nc-time-axis
+  - ncar-jobqueue
   - nodejs
   - notebook
   - numba
   - numcodecs
+  - numexpr
   - numpydoc
-  - pandas<1.1.0
+  - pandas!=1.1.0
   - pandoc
+  - panel
   - pep8
   - pillow
   - pip
+  - pint-xarray
   - pygments
-  - pyjwt
   - pykdtree
   - pylint
   - pyresample
   - pytest
   - pytest-xdist
   - python-graphviz
+  - pyviz_comms
   - pywavelets
   - qtconsole
   - scikit-image
   - seaborn
   - seawater
   - sphinx
-  - statsmodels
   - tabulate
   - tornado
   - tqdm
+  - watermark
   - virtualenv
   - viscm
   - xarray
@@ -83,5 +87,4 @@ dependencies:
   - xmitgcm
   - zarr
   - pip:
-    - dask_jobqueue
-    - ncar_jobqueue
+    - icecream

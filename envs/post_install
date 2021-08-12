@@ -14,12 +14,19 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager \
                              @ryantam626/jupyterlab_code_formatter \
                              jupyter-matplotlib
 
-jupyter serverextension enable --py jupyterlab_code_formatter
+jupyter serverextension enable --sys-prefix --py jupyterlab_code_formatter
+jupyter serverextension enable --sys-prefix --py jupyter_server_proxy
+jupyter serverextension enable --sys-prefix --py dask_labextension
 
 
-conda uninstall --force --offline xarray
+conda uninstall --force --offline -y xarray
 cd $HOME/python/xarray && pip install -e .
+
+# utilities
 cd $HOME/python/xfilter && pip install -e .
 cd $HOME/python/dcpy && pip install -e .
 cd $HOME/python/l2py && pip install -e .
 cd $HOME/python/xcoare && pip install -e .
+
+# projects
+cd $HOME/pump && pip install -e .
