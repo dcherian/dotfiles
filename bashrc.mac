@@ -1,7 +1,18 @@
-export HOMEBREW_NO_INSECURE_REDIRECT=1
-export HOMEBREW_CASK_OPTS=--require-sha
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/dcherian/mambaforge/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/dcherian/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/Users/dcherian/mambaforge/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/dcherian/mambaforge/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
-[[ -s /usr/local/etc/profile.d/autojump.sh ]] && . /usr/local/etc/profile.d/autojump.sh
 
 if [ -f /usr/local/etc/bash_completion ]; then
     . /usr/local/etc/bash_completion
@@ -9,17 +20,6 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
-# PATH="/Users/dcherian/perl5/bin${PATH:+:${PATH}}"; export PATH;
-# PERL5LIB="/Users/dcherian/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-# PERL_LOCAL_LIB_ROOT="/Users/dcherian/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-# PERL_MB_OPT="--install_base \"/Users/dcherian/perl5\""; export PERL_MB_OPT;
-# PERL_MM_OPT="INSTALL_BASE=/Users/dcherian/perl5"; export PERL_MM_OPT;
-
-
 export PATH=/Library/TeX/texbin:/usr/local/bin:$PATH
-# added by Anaconda3 4.2.0 installer
-export PATH="/Users/dcherian/anaconda/bin:$PATH"
-
-# . /home/dcherian/anaconda3/etc/profile.d/conda.sh
 
 alias ls='ls -G'
