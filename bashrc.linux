@@ -32,7 +32,7 @@ export PATH=$HOME/.autojump/bin/:$HOME/miniconda3/condabin:$HOME/.local/bin/:/us
 #
 # change in ~/.config/kdeglobals instead?
 # export QT_SCREEN_SCALE_FACTORS="eDPI1=1;HDMI1=1.5"
-export PLASMA_USE_QT_SCALING=1
+# export PLASMA_USE_QT_SCALING=1
 # use QT dialogs instead of GTK
 export GTK_USE_PORTAL=1
 
