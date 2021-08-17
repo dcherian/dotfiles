@@ -9,6 +9,7 @@ dependencies:
   - fzf
   - gh
   - jupyter-forward
+  - zoxide
   - dask_labextension
   - jupyterlab_code_formatter
   - jupyter-server-proxy

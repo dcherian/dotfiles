@@ -165,23 +165,6 @@ then
    # alias fzf='fzf --color=bg+:#eee8d5,bg:#fdf6e3,spinner:#719e07,hl:#93a1a1,fg:#000000,header:#93a1a1,info:#cb4b16,pointer:#719e07,marker:#719e07,fg+:#657b83,prompt:#719e07,hl+:#719e07'
 fi
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/deepak/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/deepak/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/deepak/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/deepak/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
 source $HOME/.bash_completions/jupyter-forward.sh
 
-
-source /home/deepak/.bash_completions/jupyter-forward.sh
+eval "$(zoxide init bash --cmd j)"
