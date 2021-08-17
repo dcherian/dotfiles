@@ -7,7 +7,7 @@ export BORG_RELOCATED_REPO_ACCESS_IS_OK=yes
 
 # Backup all of /home and /var/www except a few
 # excluded directories
-borg create -v --compression lz4 -v --stats \
+borg create -v --compression lz4 --stats \
      $REPOSITORY::'{now:%Y-%m-%d}'  \
      /home/deepak/
 
