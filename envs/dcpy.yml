@@ -19,6 +19,7 @@ dependencies:
   - distributed
   - flake8
   - geoviews
+  - graphviz
   - gsw
   - h5netcdf
   - h5py
@@ -73,6 +74,7 @@ dependencies:
   - scikit-image
   - seaborn
   - seawater
+  - snakeviz
   - sphinx
   - tabulate
   - tornado
