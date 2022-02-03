@@ -1,0 +1,13 @@
+name: build
+channels:
+  - conda-forge
+  - pyviz
+  - nodefaults
+dependencies:
+  - pip
+  - pip:
+    - build
+    - twine
+    - wheel
+    - setuptools
+    - setuptools-scm

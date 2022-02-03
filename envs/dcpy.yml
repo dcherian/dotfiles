@@ -1,7 +1,8 @@
 name: dcpy
 channels:
-  - conda-forge
   - pyviz
+  - conda-forge
+  - nodefaults
 dependencies:
   - black
   - bokeh
