@@ -1,5 +1,9 @@
 [[ -s /glade/u/home/dcherian/.autojump/etc/profile.d/autojump.sh ]] && source /glade/u/home/dcherian/.autojump/etc/profile.d/autojump.sh
 
+export SCRATCH=/glade/scratch/dcherian
+export TMP=/glade/scratch/dcherian/tmp
+
+
 # added by Miniconda3 4.5.12 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
