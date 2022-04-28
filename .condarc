@@ -1,6 +1,7 @@
 channels:
+  - pyviz
   - conda-forge
-  - defaults
+  - nodefaults
   
 show_channel_urls: True
 always_yes: no
