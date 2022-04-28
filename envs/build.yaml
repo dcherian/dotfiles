@@ -1,7 +1,6 @@
 name: build
 channels:
   - conda-forge
-  - pyviz
   - nodefaults
 dependencies:
   - pip
