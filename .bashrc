@@ -168,3 +168,4 @@ fi
 source $HOME/.bash_completions/jupyter-forward.sh
 
 eval "$(zoxide init bash --cmd j)"
+eval "$(gh completion -s bash)"
