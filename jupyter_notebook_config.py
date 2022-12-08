@@ -1,4 +1,6 @@
 c.NotebookApp.token = u''
+c.CondaKernelSpecManager.env_filter = 'conda: {environment}'
+c.CondaKernelSpecManager.name_format = '{environment}'
 
 # # from https://www.svds.com/jupyter-notebook-best-practices-for-data-science/
 # # If you want to auto-save .html and .py versions of your notebook:
