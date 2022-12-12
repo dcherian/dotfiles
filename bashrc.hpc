@@ -24,3 +24,5 @@ unset __conda_setup
 
 export TMPDIR=/glade/scratch/dcherian/tmp
 export PATH=~/.local/bin:$PATH
+
+alias qq="qstat -u dcherian"
