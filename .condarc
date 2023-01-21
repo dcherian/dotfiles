@@ -7,3 +7,4 @@ show_channel_urls: true
 always_yes: no
 channel_priority: strict
 auto_stack: 1
+repodata_use_zst: true
