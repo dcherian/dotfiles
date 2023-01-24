@@ -24,6 +24,7 @@
 	delete-branch = branch -D
 [core]
 	editor = emacsclient -t
+	excludesFile = /Users/dcherian/dotfiles/global_gitignore
 
 [merge]
 	tool = meld
