@@ -33,6 +33,7 @@ dependencies:
   - pyviz_comms
   - pip
   - pip:
+    - jupyterlab-myst
     - python-lsp-black
     - pyls-flake8
     - mypy-ls
