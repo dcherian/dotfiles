@@ -27,6 +27,7 @@ dependencies:
   - pre-commit
   - mypy
   - proselint
+  - shellcheck
   - aspell
   - pyflakes
   - pycodestyle
