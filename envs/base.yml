@@ -16,7 +16,9 @@ dependencies:
   - dask_labextension
   - jupyterlab_code_formatter
   - jupyter-server-proxy
+  - jupyterlab-deck
   - jupyterlab-lsp
+  - jupyterlab-myst
   - python-lsp-server
   - nodejs
   - ipympl
@@ -35,7 +37,6 @@ dependencies:
   - pyviz_comms
   - pip
   - pip:
-    - jupyterlab-myst
     - python-lsp-black
     - python-lsp-ruff
     - pyls-flake8
