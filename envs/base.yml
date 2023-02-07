@@ -37,6 +37,7 @@ dependencies:
   - pip:
     - jupyterlab-myst
     - python-lsp-black
+    - python-lsp-ruff
     - pyls-flake8
     - mypy-ls
     - pyls-isort
