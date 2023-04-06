@@ -6,7 +6,7 @@ channels:
 dependencies:
   - jupyterlab
   - nb_conda_kernels
-  - emacs
+  # - emacs
   - fzf
   - gh
   - jupyter-forward
@@ -19,10 +19,13 @@ dependencies:
   - jupyterlab-deck
   - jupyterlab-lsp
   - jupyterlab-myst
+  - jupyterlab_widgets
   - python-lsp-server
   - nodejs
+  - nco
   - ipympl
   - ipywidgets
+  - ipyaggrid
   - black
   - isort
   - flake8
@@ -32,13 +35,13 @@ dependencies:
   - shellcheck
   - lftp
   - aspell
-  - pyflakes
-  - pycodestyle
+  - jedi
+  - numpydoc
   - pyviz_comms
   - pip
+  - versioneer
   - pip:
     - python-lsp-black
     - python-lsp-ruff
-    - pyls-flake8
     - mypy-ls
     - pyls-isort
