@@ -7,9 +7,9 @@ dependencies:
   - jupyterlab
   - nb_conda_kernels
   # - emacs
-  - fzf
+  # - fzf
   - gh
-  - jupyter-forward
+  # - jupyter-forward
   - zoxide
   - cookiecutter
   - cruft
@@ -33,13 +33,17 @@ dependencies:
   - mypy
   - proselint
   - shellcheck
-  - lftp
+  # - lftp
   - aspell
   - jedi
   - numpydoc
   - pyviz_comms
   - pip
   - versioneer
+  - poetry
+  - awscli
+  - ipytree
+  - eccodes
   - pip:
     - python-lsp-black
     - python-lsp-ruff
