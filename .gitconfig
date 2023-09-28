@@ -3,7 +3,7 @@
 
 [user]
 	email = deepak@cherian.net
-	name = dcherian
+	name = Deepak Cherian
 
 [alias]
 	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\n--abbrev-commit --date=relative
@@ -24,7 +24,7 @@
 	delete-branch = branch -D
 [core]
 	editor = emacsclient -t
-	excludesFile = /Users/dcherian/dotfiles/global_gitignore
+	excludesFile = /Users/deepak/dotfiles/global_gitignore
 
 [merge]
 	tool = meld
