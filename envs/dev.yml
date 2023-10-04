@@ -1,0 +1,12 @@
+channels:
+  - conda-forge
+  - pyviz
+dependencies:
+  - ipdb
+  - snakeviz
+  - line_profiler
+  - memory_profiler
+  - ipykernel
+  - watermark
+  - pip:
+      - icecream
