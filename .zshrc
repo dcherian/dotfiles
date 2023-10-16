@@ -120,3 +120,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export ZARR_V3_EXPERIMENTAL_API=1
+export GPG_TTY=$TTY
