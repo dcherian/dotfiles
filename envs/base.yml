@@ -42,6 +42,7 @@ dependencies:
   - versioneer
   - poetry
   - awscli
+  - google-cloud-sdk
   - ipytree
   - eccodes
   - pip:
