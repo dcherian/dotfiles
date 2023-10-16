@@ -8,5 +8,6 @@ dependencies:
   - memory_profiler
   - ipykernel
   - watermark
+  - python-graphviz
   - pip:
       - icecream
