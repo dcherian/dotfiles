@@ -5,6 +5,12 @@ channels:
   - nodefaults
 dependencies:
   - jupyterlab
+  - jupyterlab_code_formatter
+  - jupyter-server-proxy
+  - jupyterlab-deck
+  - jupyterlab-lsp
+  - jupyterlab-myst
+  - jupyterlab_widgets
   - nb_conda_kernels
   # - emacs
   # - fzf
@@ -13,23 +19,23 @@ dependencies:
   - zoxide
   - cookiecutter
   - cruft
-  - dask_labextension
-  - jupyterlab_code_formatter
-  - jupyter-server-proxy
-  - jupyterlab-deck
-  - jupyterlab-lsp
-  - jupyterlab-myst
-  - jupyterlab_widgets
   - python-lsp-server
+  - python-lsp-ruff
+  - python-lsp-black
+  - mypy-ls
+  - pyls-isort
   - nodejs
   - nco
+  - dask_labextension
   - ipympl
   - ipywidgets
   - ipyaggrid
+  - ipytree
+  - pre-commit
+  - ruff
   - black
   - isort
   - flake8
-  - pre-commit
   - mypy
   - proselint
   - shellcheck
@@ -43,10 +49,4 @@ dependencies:
   - poetry
   - awscli
   - google-cloud-sdk
-  - ipytree
   - eccodes
-  - pip:
-    - python-lsp-black
-    - python-lsp-ruff
-    - mypy-ls
-    - pyls-isort
