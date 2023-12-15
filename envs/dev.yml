@@ -4,6 +4,7 @@ channels:
 dependencies:
   - ipdb
   - snakeviz
+  - snoop
   - line_profiler
   - memory_profiler
   - ipykernel
