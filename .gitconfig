@@ -22,13 +22,15 @@
 	stashes = stash list
 	rename-branch = branch -m
 	delete-branch = branch -D
+
 [core]
 	editor = emacsclient -t
 	excludesFile = /Users/deepak/dotfiles/global_gitignore
+	pager = delta
 
 [merge]
-	tool = meld
 	summary = true
+	conflictstyle = zdiff3
 
 [credential]
 	helper = cache --timeout=432000
@@ -53,6 +55,8 @@
 [diff]
 	mnemonicprefix = true
 	indentHeuristic = true
+	algorithm = histogram
+
 [github]
 	user = dcherian
 [init]
@@ -61,3 +65,11 @@
 	ignoreRevsFile = .git-blame-ignore-revs
 [commit]
 	gpgsign = false
+[branch]
+	sort = -committerdate
+[fetch]
+	prune = true
+[rerere]
+	enabled = true
+[rebase]
+	updateRefs = true
