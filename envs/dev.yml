@@ -8,7 +8,9 @@ dependencies:
   - line_profiler
   - memory_profiler
   - ipykernel
+  - ptime
   - watermark
   - python-graphviz
+  - dask-labextension  # needed for cool "launch dashboard" button
   - pip:
       - icecream

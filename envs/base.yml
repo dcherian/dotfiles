@@ -17,6 +17,7 @@ dependencies:
   - gh
   # - jupyter-forward
   - zoxide
+  - git-delta
   - cookiecutter
   - cruft
   - python-lsp-server
@@ -47,6 +48,8 @@ dependencies:
   - pip
   - versioneer
   - poetry
+  - eccodes
+  # cloudy
   - awscli
   - google-cloud-sdk
-  - eccodes
+  # - s5cmd  # not on osx-arm
